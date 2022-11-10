@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <HeaderComp />
     <TodosComp v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
 </template>
 
 <script>
 import TodosComp from "./components/Todos";
+import HeaderComp from "./components/layout/Header";
 
 export default {
   name: "App",
   components: {
     TodosComp,
+    HeaderComp,
   },
   data() {
     return {
